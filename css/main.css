@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+
+.gallery-cell {
+	background: url(../img/glee.JPG) no-repeat center center;
+	height: 100vh;
+}
+
+.no-float {
+	float: none;
+}
+
+.cntr-block {
+	margin: 0 auto;
+}
