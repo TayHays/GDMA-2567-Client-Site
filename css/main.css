@@ -1,9 +1,22 @@
 @charset "utf-8";
 /* CSS Document */
 
-.gallery-cell {
-	background: url(../img/glee.JPG) no-repeat center center;
-	height: 100vh;
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.float-right {
+	float: right;
 }
 
 .no-float {
@@ -12,4 +25,48 @@
 
 .cntr-block {
 	margin: 0 auto;
+}
+
+.main-gallery {
+	height: 100vh;
+}
+
+input {
+	width: 100%;
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+
+@media screen and (max-width: 480px) {
+	
+	#home .col-2-3:last-child, .col-1-2, .col-1-5, .col-1-6, #services div.col-1-4.row, footer .wrapper:nth-child(2), footer .col-2-3 {
+		width: 100%;
+	}
+	
+	.col-1-2 .col-1-2 {
+		width: 50%;
+	}
+	
+}
+
+@media screen and (min-width: 480px) {
+
+	#services .col-1-4 .col-1-4, #services .col-3-4, #about .col-1-4, #about .col-3-4 {
+		width: 100%;
+	}
+	
 }
