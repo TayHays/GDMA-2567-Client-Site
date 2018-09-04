@@ -1,5 +1,39 @@
 @charset "utf-8";
 /* CSS Document */
+/*--------------------------------------------------------------
+
+>>> TABLE OF CONTENTS:
+
+----------------------------------------------------------------
+
+1.0 - Typography
+	1.1 - Headings
+	1.2 - Body Copy
+	1.3 - Buttons
+	1.4 - Forms
+	1.5 - Lists
+	1.6 - Tables
+
+2.0 - Navigation Menus
+	2.1 - Main
+	2.2 - Sub
+	2.3 - Footer
+
+3.0 - Content
+	3.1 - Site Structure
+	3.2 - Site Header
+	3.3 - Site Footer
+
+4.0 - Media
+
+5.0 - Utility
+	5.1 - Text Sizes
+	5.2 - Colors
+	5.3 - Alignments
+
+6.0 - Responsive/Media Queries
+
+--------------------------------------------------------------*/
 
 *, *:after, *:before {
 	-webkit-box-sizing: border-box;
@@ -15,28 +49,108 @@
 	clear: both;
 }
 
-.float-right {
-	float: right;
+.row {
+	margin-right: 0px;
+	margin-left: 0px;
 }
 
-.no-float {
-	float: none;
+/*--------------------------------------------------------------
+1.0 - Typography
+-------------------------------------------------------------- */
+
+#home span {
+	display: none;
 }
 
-.cntr-block {
-	margin: 0 auto;
+/*	1.1 - Headings        */
+/*	1.2 - Body Copy       */
+/*	1.3 - Buttons         */
+/*	1.4 - Forms           */
+
+#about form input, #about form p, nav li {
+	display: inline-block;
 }
 
-.main-gallery {
-	height: 100vh;
+#about form label, .row {
+	display: block;
 }
 
-input {
+footer form input {
 	width: 100%;
 }
 
-#col-7-12 {
-	display: inline-block;
+/*	1.5 - Lists           */
+/*	1.6 - Tables          */
+
+
+
+/*--------------------------------------------------------------
+2.0 - Navigation Menus
+-------------------------------------------------------------- */
+
+/*	2.1 - Main             */
+/*	2.2 - Sub              */
+/*	2.3 - Footer           */
+
+
+/*--------------------------------------------------------------
+3.0 - Content
+-------------------------------------------------------------- */
+
+#home {
+	
+}
+
+/*	3.1 - Site Structure    */
+
+#services .cntr-block {
+	width: 40%;
+}
+
+/*	3.2 - Site Header       */
+#home {
+	background: url(../img/bg-hero.jpg) 0 0 no-repeat;
+}
+
+/*	3.3 - Site Footer       */
+
+/*--------------------------------------------------------------
+4.0 - Media
+-------------------------------------------------------------- */
+
+
+
+.gallery-cell {
+	height: 100vh;
+	width: 100%;
+}
+
+.gallery-cell:first-child {
+	background: url(../img/bg-gallery1.jpg) 0 0 no-repeat;
+}
+
+.gallery-cell:nth-child(2) {
+	background: url(../img/bg-gallery2.jpg) 0 0 no-repeat;
+}
+
+.gallery-cell:nth-child(3) {
+	background: url(../img/bg-gallery3.jpg) 0 0 no-repeat;
+}
+
+.gallery-cell:nth-child(4) {
+	background: url(../img/bg-gallery4.jpg) 0 0 no-repeat;
+}
+
+.gallery-cell:last-child {
+	background: url(../img/bg-gallery5.jpg) 0 0 no-repeat;
+}
+
+#adventure {
+	background: url(../img/bg-adventure.jpg) 0 0 no-repeat;
+}
+
+#services .bg-gray div {
+	background: url(../img/bg-deluxe.jpg) 0 0 no-repeat;
 }
 
 .map-responsive{
@@ -54,10 +168,36 @@ input {
     position:absolute;
 }
 
-#home span {
-	display: none;
+#home, .gallery-cell {
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+/*--------------------------------------------------------------
+5.0 - Utility
+-------------------------------------------------------------- */
+
+/*	5.1 - Text Sizes        */
+/*	5.2 - Colors            */
+/*	5.3 - Alignments        */
+
+.float-right {
+	float: right;
 }
 
+.no-float {
+	float: none;
+}
+
+.cntr-block {
+	margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+6.0 - Responsive/Media Queries
+-------------------------------------------------------------- */
 
 @media screen and (max-width: 480px) {
 	
