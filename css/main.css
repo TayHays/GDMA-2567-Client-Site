@@ -35,6 +35,10 @@ input {
 	width: 100%;
 }
 
+#col-7-12 {
+	display: inline-block;
+}
+
 .map-responsive{
     overflow:hidden;
     padding-bottom:56.25%;
@@ -48,6 +52,10 @@ input {
     height:100%;
     width:100%;
     position:absolute;
+}
+
+#home span {
+	display: none;
 }
 
 

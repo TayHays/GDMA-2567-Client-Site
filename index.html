@@ -11,9 +11,10 @@
 	
 <link rel="stylesheet" type="text/css" href="css/flickity.css">
 	
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	
-<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Open+Sans:300,400,600,700,800|Zilla+Slab:300,400,500,600,700" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
 	
 <link rel="stylesheet" type="text/css" href="css/main.css">
 	
@@ -110,7 +111,7 @@
 			<p>This course is suited for all ages and abilities. We can show you a wide range of techniques to make you a competent surfer!</p>
 			<div class="row">
 				<div class="col-1-3">
-					<p>outback surfing techniques</p>
+					<p>outback surfing techniques <button type="button" class="btn-info" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="We show you how to sit up and spin your board prior to paddling for a wave.">i</button></p>
 				</div>
 				<div class="col-1-3">
 					<p>experiment with different surfboards</p>
@@ -119,7 +120,7 @@
 					<p>2.5 hour private lesson</p>
 				</div>
 			</div>
-			<p><a href="">Book Now</a></p>
+			<p><a href="https://www.google.com/" target="_blank">Book Now</a></p>
 		</section>
 	</div>
 	
@@ -142,16 +143,16 @@
 				</div>
 				<p>When you are confident at turning your board both ways we move onto S-turns.</p>
 				<div class="col-1-3 no-float">
-					<p>S-turns</p>
+					<p>S-turns <button type="button" class="btn-info" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="Do multiple turns on one wave">i</button></p>
 				</div>
-				<p><a href="">Book Now</a></p>
+				<p><a href="https://www.google.com/" target="_blank">Book Now</a></p>
 			</section>
 			<section class="col-1-2">
 				<div class="row">
 					<div class="col-2-3">
 						<p><span>3</span>day</p>
 						<header>
-							<h3><span>Ultimate</span>Wave Rider</h3>
+							<h3><span>Ultimate </span>Wave Rider</h3>
 						</header>
 					</div>
 					<div class="col-1-3">
@@ -170,7 +171,7 @@
 						<p>Different surf locations</p>
 					</div>
 				</div>
-				<p><a href="">Book Now</a></p>
+				<p><a href="https://www.google.com/" target="_blank">Book Now</a></p>
 			</section>
 		</div>
 		<div class="row">
@@ -190,7 +191,7 @@
 				<div class="col-1-3 no-float">
 					<p>Padding</p>
 				</div>
-				<p><a href="">Book Now</a></p>
+				<p><a href="https://www.google.com/" target="_blank">Book Now</a></p>
 			</section>
 			<section class="col-1-2">
 				<div class="row">
@@ -213,7 +214,7 @@
 						<p>Stance</p>
 					</div>
 				</div>
-				<p><a href="">Book Now</a></p>
+				<p><a href="https://www.google.com/" target="_blank">Book Now</a></p>
 			</section>
 		</div>
 	</div>
@@ -224,7 +225,7 @@
 		<p>Get ready for your surf adventure with this article!</p>
 	</div>
 	<div class="col-1-4">
-		<p><a href="http://www.theinertia.com/surf/8-awesome-ways-to-prepare-for-a-surf-trip/ ">Let's Go!</a></p>
+		<p><a href="http://www.theinertia.com/surf/8-awesome-ways-to-prepare-for-a-surf-trip/ " target="_blank">Let's Go!</a></p>
 	</div>
 </div>
 
@@ -347,6 +348,10 @@
 	
 	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 <script src="js/flickity.pkgd.js"></script>
 	
 	<script>
@@ -354,6 +359,12 @@
 		  // options
 		  cellAlign: 'left',
 		  contain: true
+		});
+	</script>
+	
+	<script>
+		$(document).ready(function(){
+			$('[data-toggle="popover"]').popover();   
 		});
 	</script>
 	
