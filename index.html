@@ -12,7 +12,8 @@
 <link rel="stylesheet" type="text/css" href="css/flickity.css">
 	
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-
+	
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900|Zilla+Slab:300,400,500,600,700" rel="stylesheet">
 	
 <link rel="stylesheet" type="text/css" href="css/main.css">
 	
@@ -61,13 +62,11 @@
 	
 <section id="services">
 	<div class="wrapper">
-		<div class="cntr-block">
-			<header>
-				<h2>Packages</h2>
-			</header>
-			<p><span>All packages include:</span><br>
-			4 hour group lessons from pickup to dropoff</p>
-		</div>
+		<header>
+			<h2>Packages</h2>
+		</header>
+		<p><span>All packages include:</span><br>
+		4 hour group lessons from pickup to dropoff</p>
 		<div class="row">
 			<div class="col-1-4 row"> 
 				<div class="col-1-4 diamond"></div> <!-- apply image icons as background image -->
@@ -127,6 +126,7 @@
 	<div class="bg-gray">
 		<div></div> <!-- background image placed on this div. use clippy -->
 	</div>
+	
 	<div class="wrapper">
 		<div class="row">
 			<section class="col-1-2">
@@ -338,7 +338,7 @@
 			<label><span>Subject</span>
 				<input type="text" name="subject" placeholder="Subject">
 			</label>
-			<textarea name="message" rows="6" cols="20" placeholder="Message"></textarea>
+			<textarea name="message" rows="6" cols="63" placeholder="Message"></textarea>
 			<p><a href="#">Submit</a></p>
 		</form>
 	</div>
@@ -360,85 +360,55 @@
 		  contain: true
 		});
 	</script>
+
 	
 	<script>
-		$( function()
-		{
-			var targets = $( '[rel~=tooltip]' ),
-				target  = false,
-				tooltip = false,
-				title   = false;
-
-			targets.bind( 'mouseenter', function()
-			{
-				target  = $( this );
-				tip     = target.attr( 'title' );
-				tooltip = $( '<div id="tooltip"></div>' );
-
-				if( !tip || tip == '' )
-					return false;
-
-				target.removeAttr( 'title' );
-				tooltip.css( 'opacity', 0 )
-					   .html( tip )
-					   .appendTo( 'body' );
-
-				var init_tooltip = function()
-				{
-					if( $( window ).width() < tooltip.outerWidth() * 1.5 )
-						tooltip.css( 'max-width', $( window ).width() / 2 );
-					else
-						tooltip.css( 'max-width', 340 );
-
-					var pos_left = target.offset().left + ( target.outerWidth() / 2 ) - ( tooltip.outerWidth() / 2 ),
-						pos_top  = target.offset().top - tooltip.outerHeight() - 20;
-
-					if( pos_left < 0 )
-					{
-						pos_left = target.offset().left + target.outerWidth() / 2 - 20;
-						tooltip.addClass( 'left' );
-					}
-					else
-						tooltip.removeClass( 'left' );
-
-					if( pos_left + tooltip.outerWidth() > $( window ).width() )
-					{
-						pos_left = target.offset().left - tooltip.outerWidth() + target.outerWidth() / 2 + 20;
-						tooltip.addClass( 'right' );
-					}
-					else
-						tooltip.removeClass( 'right' );
-
-					if( pos_top < 0 )
-					{
-						var pos_top  = target.offset().top + target.outerHeight();
-						tooltip.addClass( 'top' );
-					}
-					else
-						tooltip.removeClass( 'top' );
-
-					tooltip.css( { left: pos_left, top: pos_top } )
-						   .animate( { top: '+=10', opacity: 1 }, 50 );
-				};
-
-				init_tooltip();
-				$( window ).resize( init_tooltip );
-
-				var remove_tooltip = function()
-				{
-					tooltip.animate( { top: '-=10', opacity: 0 }, 50, function()
-					{
-						$( this ).remove();
-					});
-
-					target.attr( 'title', tip );
-				};
-
-				target.bind( 'mouseleave', remove_tooltip );
-				tooltip.bind( 'click', remove_tooltip );
-			});
-		});
-	</script>
+        $( function()
+        {
+            var targets = $( '[rel~=tooltip]' ),
+                target  = false,
+                tooltip = false,
+                title   = false;
+			
+            targets.bind( 'mouseenter', function()
+            {
+                target  = $( this );
+                tip     = target.attr( 'title' );
+                tooltip = $( '<div id="tooltip"></div>' );
+                if( !tip || tip == '' )
+                    return false;
+                target.removeAttr( 'title' );
+                tooltip.css( 'opacity', 0 )
+                       .html( tip )
+                       .appendTo( 'body' );
+                var init_tooltip = function()
+                {
+                    if( $( window ).width() < tooltip.outerWidth() * 1.5 )
+                        tooltip.css( 'max-width', $( window ).width() / 2 );
+                    else
+                        tooltip.css( 'max-width', 340 );
+                    var pos_left = target.offset().left + ( target.outerWidth() ) + 20,
+                        pos_top  = target.offset().top - tooltip.outerHeight() + 30;
+    
+                    
+                    tooltip.css( { left: pos_left, top: pos_top } )
+                           .animate( { top: '+=10', opacity: 1 }, 50 );
+                };
+                init_tooltip();
+                $( window ).resize( init_tooltip );
+                var remove_tooltip = function()
+                {
+                    tooltip.animate( { top: '-=10', opacity: 0 }, 50, function()
+                    {
+                        $( this ).remove();
+                    });
+                    target.attr( 'title', tip );
+                };
+                target.bind( 'mouseleave', remove_tooltip );
+                tooltip.bind( 'click', remove_tooltip );
+            });
+        });
+    </script>
 	
 </body>
 </html>

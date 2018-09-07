@@ -124,14 +124,32 @@ https://flickity.metafizzy.co
 
 .flickity-page-dots .dot {
   display: inline-block;
-  width: 10px;
-  height: 10px;
   margin: 0 8px;
-  background: #d1d3d4;
-  border-radius: 50%;
   cursor: pointer;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-bottom-color: #d1d3d4;
+	position: relative;
+	top: -10px;
+}
+
+
+.flickity-page-dots .dot:after {
+	content: '';
+	position: absolute;
+	left: -10px;
+	top: 10px;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-top-color: #d1d3d4;
 }
 
 .flickity-page-dots .dot.is-selected {
-  background-color: #333132;
+  border-bottom-color: #333132;
+}
+
+.flickity-page-dots .dot.is-selected:after {
+  border-top-color: #333132;
 }
