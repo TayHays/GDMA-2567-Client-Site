@@ -12,12 +12,10 @@
 	1.3 - Buttons
 	1.4 - Forms
 	1.5 - Lists
-	1.6 - Tables
 
 2.0 - Navigation Menus
 	2.1 - Main
 	2.2 - Sub
-	2.3 - Footer
 
 3.0 - Content
 	3.1 - Site Structure
@@ -35,25 +33,11 @@
 
 --------------------------------------------------------------*/
 
-*, *:after, *:before {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-.row:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
 /*--------------------------------------------------------------
 1.0 - Typography
 -------------------------------------------------------------- */
 
-ul, p, header {
+ul, p, header, h3 {
 	-webkit-margin-before: 0;
     -webkit-margin-after: 0;
 }
@@ -66,101 +50,151 @@ abbr {
 	font-family: 'Zilla Slab', serif;
 }
 
-#home span, label span, #services .col-1-2 span, li span, #services .col-1-4 .col-3-4 span {
+#home span, label, #services .col-1-2 span, li span, #services .col-1-4 .col-3-4 span {
 	display: none;
 }
 
-body > section:nth-child(2), #services .row:nth-child(3) {
+#about form input, #about form p, li, body > div:nth-child(4) p {
+	display: inline-block;
+}
+
+body > section:nth-child(2), h1, h2, #services > div > p:nth-child(2), #services > div > .row:nth-child(3), tooltip, ul, .abso.col-1-3 p:last-child, .col-1-5 {
 	text-align: center;
 }
 
-nav ul, #home .col-2-3:nth-child(2) {
+nav ul, .abso.col-1-3 > p:first-child, #services .col-2-3 p:first-child, h3, #services li {
 	text-transform: uppercase;
 }
 
+nav a, h2, h3, #tooltip, p {
+	color: #262262;
+}
+
 /*	1.1 - Headings        */
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
 /*	1.2 - Body Copy       */
 
-#services .col-1-4 p, .col-1-5 p {
-	padding: 3em .5em 0;
+.abso.col-2-5 > div p:first-child, .col-2-5 > p:first-child, body > section:nth-child(2) p, #services p span, #services .rel p {
+	font-weight: 500;
+}
+
+.abso.col-2-5 p, a {
+	color: #fff;
+}
+
+.abso.col-2-5 > div p:first-child, body > section:nth-child(2) p, #services p span {
+	font-size: 1.2rem;
+	line-height: 2rem;
+}
+
+.col-2-5 > p:first-child {
+	font-size: 3rem;
+}
+
+#services section > p {
+	line-height: 1.5rem;
+}
+
+#services .col-2-3 p:first-child, h3::before {
+	color: #00a8e1;
+}
+
+#services h3::before {
+	font-size: 3.7rem;
+}
+
+#services > div:first-child .col-2-3 h3::before {
+	content: "5";
+}
+
+#services > div:nth-child(3) .row:first-child > .col-1-2:first-child h3::before {
+	content: "4";
+}
+
+#services > div:nth-child(3) .row:first-child > .col-1-2:nth-child(2) h3::before {
+	content: "3";
+}
+
+#services > div:nth-child(3) .row:nth-child(2) > .col-1-2:first-child h3::before {
+	content: "2";
+}
+
+#services > div:nth-child(3) .row:nth-child(2) > .col-1-2:nth-child(2) h3::before {
+	content: "1";
+}
+
+#services .rel p {
+	padding-left: 1rem;
+	font-size: .8rem;
 }
 
 /*	1.3 - Buttons         */
 
-a {
+a, abbr[title] {
 	text-decoration: none;
 }
 
 	/* tooltip */
+abbr {
+	border: 2px solid #262262;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	padding: 0 .45rem .05rem;
+	text-transform: lowercase;
+}
+
 #tooltip
 {
-    text-align: center;
-    color: #2b3990;
     background: #fff;
     border: 2px solid #00a8e1;
-    position: absolute;
     z-index: 100;
     padding: 15px;
-    display: block;
 }
  
     #tooltip:before /* triangle decoration */
     {
         width: 0;
-        height: 0;
         border-top: 10px solid transparent;
         border-right: 10px solid #00a8e1;
         border-bottom: 10px solid transparent;
         content: '';
-        position: absolute;
         left: -10px;
         top: 50%;
         margin-top: -10px;
     }
  
-        #tooltip.top:after
-        {
-            border-top-color: transparent;
-            border-bottom: 10px solid #111;
-            top: -20px;
-            bottom: auto;
-        }
- 
-        #tooltip.left:after
-        {
-            left: 10px;
-            margin: 0;
-        }
- 
-        #tooltip.right:after
-        {
-            right: 10px;
-            left: auto;
-            margin: 0;
-        }
+#services a, form a, .abso.col-2-5 p:last-child {
+	background-color: #00a8e1;
+}
 
 /*	1.4 - Forms           */
 
-#about form input, #about form p, nav li {
-	display: inline-block;
-}
-
-#about form label, .row {
+#about form label, #tooltip {
 	display: block;
-}
-
-footer form input {
-	width: 100%;
 }
 
 /*	1.5 - Lists           */
 
+header li {
+	padding: 1rem 2rem;
+	font-weight: 600;
+}
+
 ul {
 	list-style: none;
 }
-
-/*	1.6 - Tables          */
-
 
 
 /*--------------------------------------------------------------
@@ -168,70 +202,108 @@ ul {
 -------------------------------------------------------------- */
 
 /*	2.1 - Main             */
+
+nav {
+	margin-bottom: 6rem;
+}
+
 /*	2.2 - Sub              */
-/*	2.3 - Footer           */
 
 
 /*--------------------------------------------------------------
 3.0 - Content
 -------------------------------------------------------------- */
 
-.diamond {
-	position: relative;
-    width: 50%;
-    padding-bottom: 50%; /* make diamonds responsive! */
-    overflow: hidden;
-	transform: rotate(45deg);  /*CSS3?*/
-	transform-origin: 0 100%; /*CSS3?*/
-	border: 2px solid #262262;
-} 
-
-#services .diamond {
-	margin-left: 1.5em;
-}
-
 /*	3.1 - Site Structure    */
 
-#services > .cntr-block:first-child {
-	width: 40%;
+body > .bg-gray .abso {
+	top: 30rem;
+	left: 48%;
 }
 
-body > div:first-child .bg-blue {
-	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 70%);
-	clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 70%);
+.col-1-4 .col-1-4, .col-1-5 .col-1-4 {
+	padding: 3rem 20% 1rem;
 }
 
-body > div:first-child {
-	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
-	clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
-} 
-
-#services .col-1-4, .col-1-5 {
-	padding-right: 0;
+#services .rel {
+	padding: 1rem 1.5rem 0;
+	margin-bottom: .5rem;
 }
+
+#services section {
+	margin-top: 6rem;;
+}
+
+#services h3::before, footer .bg-blue {
+	z-index: -1;
+}
+
 
 /*	3.2 - Site Header       */
 #home {
-	height: 110vh;
-	background: url(../img/bg-hero.jpg) 0 175% no-repeat;
-	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 55%, 0 40%);
-	clip-path: polygon(0 0, 100% 0%, 100% 55%, 0 40%); 
+	height: 100vh;
+	background: url(../img/bg-hero.jpg) center 90% no-repeat;
+	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 65%, 0 55%);
+	clip-path: polygon(0 0, 100% 0%, 100% 65%, 0 55%); 
 }
 
+body > div:first-child .bg-blue {
+	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
+	clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
+}
+
+body > div:first-child {
+	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+	clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+} 
+
 /*	3.3 - Site Footer       */
+
+footer {
+	border-bottom: 10px solid #00a8e1;
+}
+
+footer .bg-blue {
+	height: 90vh;
+	-webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+	clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+	bottom: 0;
+}
 
 /*--------------------------------------------------------------
 4.0 - Media
 -------------------------------------------------------------- */
 
-.main-gallery {
-	-webkit-clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0 100%);
-	clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0 100%);
+.rel, .map-responsive iframe, #services h3::before, #services .bg-gray {
+	top: 0;
 }
 
-.gallery-cell {
-	height: 75vh;
+.rel, footer .bg-blue, .map-responsive iframe, #services h3::before, #services .bg-gray {
+	left: 0;
+}
+
+#adventure, .gallery-cell, footer .bg-blue, footer form input, textarea, .map-responsive iframe, #services .bg-gray {
 	width: 100%;
+}
+
+#adventure {
+	background: url(../img/bg-adventure.jpg) 0 center no-repeat;
+	-webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 80%);
+	clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 80%);
+}
+
+.bg-gray:nth-child(5) {
+	-webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+	clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+}
+
+.gallery-cell, #services .bg-gray {
+	-webkit-clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
+	clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
+}
+
+.gallery-cell, #adventure, #services .bg-gray {
+	height: 75vh;
 }
 
 .gallery-cell:first-child {
@@ -258,26 +330,28 @@ body > div:first-child {
 	background: url(../img/bg-adventure.jpg) 0 0 no-repeat;
 }
 
+#services .bg-gray {
+	z-index: -2;
+}
+
 #services .bg-gray div {
 	background: url(../img/bg-deluxe.jpg) 0 0 no-repeat;
 }
 
+.map-responsive, #tooltip:before {
+	height: 0;
+}
+
 .map-responsive{
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
 }
 
-.map-responsive iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
+.map-responsive iframe {
+    height: 100%;
 }
 
-#home, .gallery-cell:nth-child(odd), .gallery-cell:nth-child(even) {
+#adventure, #home, .gallery-cell:nth-child(odd), .gallery-cell:nth-child(even) {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	-ms-background-size: cover;
@@ -302,7 +376,7 @@ body > div:first-child {
 
 /*	5.3 - Alignments        */
 
-.abso {
+.abso, #services h3::before, #tooltip, #tooltip:before {
 	position: absolute;
 }
 
@@ -330,7 +404,7 @@ body > div:first-child {
 
 @media screen and (max-width: 480px) {
 	
-	#home .col-2-3:last-child, .col-1-2, .col-1-5, .col-1-6, #services div.col-1-4.row, footer .wrapper:nth-child(2), footer .col-2-3 {
+	#home .col-2-3:last-child, .col-1-2, .col-1-6, #services div.col-1-4.row, footer .wrapper:nth-child(2), footer .col-2-3 {
 		width: 100%;
 	}
 	
@@ -338,11 +412,21 @@ body > div:first-child {
 		width: 50%;
 	}
 	
+	.col-1-4 .col-1-4, .col-1-5 .col-1-4 {
+		padding: 0;
+	}
+	
+	.col-1-4 .col-3-4, .col-1-5 .col-3-4 {
+		padding: 10% 0 10% 1.5rem;
+		margin-bottom: 0;
+		text-align: left;
+	}
+	
 }
 
 @media screen and (min-width: 480px) {
 
-	#services .col-3-4, #about .col-3-4 {
+	#services .col-3-4, #services .col-1-4 .col-1-4, #about .col-3-4, #about .col-1-5 .col-1-4 {
 		width: 100%;
 	}
 	
