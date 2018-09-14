@@ -25,9 +25,8 @@
 4.0 - Media
 
 5.0 - Utility
-	5.1 - Text Sizes
-	5.2 - Colors
-	5.3 - Alignments
+	5.1 - Colors
+	5.2 - Alignments
 
 6.0 - Responsive/Media Queries
 
@@ -42,7 +41,7 @@ ul, p, header, h3 {
     -webkit-margin-after: 0;
 }
 
-header, h2, p, form, ul {
+header, h2, p, form, ul, #tooltip {
 	font-family: 'Poppins', sans-serif;
 }
 
@@ -62,11 +61,11 @@ nav ul, .abso.col-1-3 > p:first-child, #services .col-2-3 p:first-child, h3, #se
 	text-transform: uppercase;
 }
 
-h3, header li, #about .col-1-2 p:nth-child(2), #about .col-1-2.abso, body > div:nth-child(4) p:first-child {
+h3, header li, #about .col-1-2 p:nth-child(2), #about .col-1-2.abso, body > div:nth-child(4) p:first-child, .col-7-12 label {
 	font-weight: 600;
 }
 
-nav a, .col-1-6 a, h2, h3, #services ul, #tooltip, p, footer li a:hover {
+nav a, .col-1-6 a, h2, h3, #services ul, #tooltip, p, footer li a:hover, .col-7-12 label {
 	color: #262262;
 }
 
@@ -98,18 +97,21 @@ h2, #about h3 {
 	color: #fff;
 }
 
-.col-2-5 div p, body > section:nth-child(2) p, #services p span, #about .col-1-2 p {
+.col-2-5 p:nth-child(2), .col-2-5 div p, body > section:nth-child(2) p, #services p span, #about .col-1-2 p {
 	font-size: 1.2rem;
+}
+
+.col-2-5 p:nth-child(2), body > section:nth-child(2) p, #services p span, #about .col-1-2 p, #services .col-1-2 > p {
+	line-height: 2rem;
 }
 
 .col-2-5 > p:first-child {
 	font-size: 3rem;
 }
 
-#services section > p, .col-2-5 p:last-child, .col-1-6 {
-	line-height: 1.5rem;
+.col-2-5 p:nth-child(2), #services section > p, .col-2-5 p:last-child, .col-3-4, .col-1-6 {
+	line-height: 1.8rem;
 }
-
 
 #services h3::before {
 	font-size: 3.7rem;
@@ -209,7 +211,6 @@ header li {
 }
 
 
-
 /*--------------------------------------------------------------
 2.0 - Navigation Menus
 -------------------------------------------------------------- */
@@ -256,26 +257,20 @@ footer li {
 }
 
 
-
 /*	3.1 - Site Structure    */
 
-.abso.col-2-5 .col-1-2 {
-	padding-right: 1rem;
-}
-
-body > .bg-gray .abso {
-	top: 30rem;
-	left: 48%;
-}
 
 body > div:nth-child(5), body > section, .main-gallery  {
 	margin-bottom: 10rem;
 }
 
 .col-1-4 .col-1-4, .col-1-5 .col-1-4 {
-	padding: 3rem 20% 1rem;
+	padding: 3rem 15% 1rem;
 }
 
+.col-1-6 {
+	padding-right: 0;
+}
 
 #services .rel p, .abso.col-2-5 .col-1-2, .col-1-6 {
 	padding-left: 1rem;
@@ -295,14 +290,16 @@ body > div:nth-child(5), body > section, .main-gallery  {
 }
 
 #services ul {
+	-o-column-count: 3;
+    -o-column-gap: 3rem;
 	-ms-column-count: 3;
-    -ms-column-gap: 13%;
+    -ms-column-gap: 3rem;
     -moz-column-count: 3;
-    -moz-column-gap: 13%;
+    -moz-column-gap: 3rem;
     -webkit-column-count: 3;
-    -webkit-column-gap: 13%;
+    -webkit-column-gap: 3rem;
     column-count: 3;
-    column-gap: 13%;
+    column-gap: 3rem;
 	margin: 1rem 0 2rem;
 }
 
@@ -316,24 +313,41 @@ ul {
 	-webkit-padding-start: 0;
 }
 
+#adventure, .gallery-cell, footer .bg-blue, footer form input, textarea, .map-responsive iframe, #services .abso {
+	width: 100%;
+}
+
+.gallery-cell, #adventure {
+	height: 75vh;
+}
+
+.rel, .map-responsive iframe, #services h3::before, #services .abso {
+	top: 0;
+}
+
+.rel, footer .bg-blue, .map-responsive iframe, #services h3::before, #services .abso {
+	left: 0;
+}
+
+#about .col-1-2.abso {
+	left: 12rem;
+	bottom: 1.75rem;
+}
+
+body > section:nth-child(2) {
+	top: -7rem;
+}
+
 /*	3.2 - Site Header       */
 
-#home {
-	height: 58rem;
-	background: url(../img/bg-hero.jpg) center 90% no-repeat;
-	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 65%, 0 55%);
-	clip-path: polygon(0 0, 100% 0%, 100% 65%, 0 55%); 
+body > .bg-gray .abso {
+	top: 30rem;
+	left: 48%;
 }
 
-body > div:first-child .bg-blue {
-	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
-	clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
+.col-2-5 .col-1-2 {
+	padding-right: 1rem;
 }
-
-body > div:first-child {
-	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
-	clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
-} 
 
 /*	3.3 - Site Footer       */
 
@@ -353,30 +367,7 @@ footer .bg-blue {
 4.0 - Media
 -------------------------------------------------------------- */
 
-.rel, .map-responsive iframe, #services h3::before, #services .abso {
-	top: 0;
-}
 
-.rel, footer .bg-blue, .map-responsive iframe, #services h3::before, #services .abso {
-	left: 0;
-}
-
-#about .col-1-2.abso {
-	left: 12rem;
-	bottom: 1.75rem;
-}
-
-#adventure, .gallery-cell, footer .bg-blue, footer form input, textarea, .map-responsive iframe, #services .abso {
-	width: 100%;
-}
-
-body > section:nth-child(2) {
-	top: -7rem;
-}
-
-.gallery-cell, #adventure {
-	height: 75vh;
-}
 
 #adventure {
 	background: url(../img/bg-adventure.jpg) 0 center no-repeat;
@@ -388,6 +379,16 @@ body > section:nth-child(2) {
 	-webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
 	clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
 }
+
+body > div:first-child .bg-blue {
+	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
+	clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
+}
+
+body > div:first-child {
+	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+	clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+} 
 
 #diamond {
 	background: url(../img/aside-surfers.jpg) 0 0 no-repeat;
@@ -422,11 +423,17 @@ body > section:nth-child(2) {
 	background: url(../img/gallery-cove.jpg) 0 center no-repeat;
 }
 
+#home {
+	height: 58rem;
+	background: url(../img/bg-hero.jpg) center 90% no-repeat;
+	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 65%, 0 55%);
+	clip-path: polygon(0 0, 100% 0%, 100% 65%, 0 55%); 
+}
 
 #services .bg-gray {
 	-webkit-clip-path: polygon(0 10%, 100% 0, 100% 50%, 0 60%);
 	clip-path: polygon(0 10%, 100% 0, 100% 50%, 0 60%);
-	height: 95vh;
+	height: 130vh;
 }
 
 #services .abso {
@@ -436,6 +443,7 @@ body > section:nth-child(2) {
 	z-index: -2;
 }
 
+/* MAP */
 
 .map-responsive, #tooltip:before {
 	height: 0;
@@ -462,8 +470,7 @@ body > section:nth-child(2) {
 5.0 - Utility
 -------------------------------------------------------------- */
 
-/*	5.1 - Text Sizes        */
-/*	5.2 - Colors            */
+/*	5.1 - Colors            */
 
 
 
@@ -475,7 +482,7 @@ body > section:nth-child(2) {
 	background-color: #e6e7e8;
 }
 
-/*	5.3 - Alignments        */
+/*	5.2 - Alignments        */
 
 .abso, #services h3::before, #tooltip, #tooltip:before {
 	position: absolute;
@@ -505,7 +512,28 @@ body > section:nth-child(2) {
 
 @media screen and (max-width: 480px) {
 	
-	/* Widths */
+	/*--------------------------------------------------------------
+
+	>>> TABLE OF CONTENTS:
+
+	----------------------------------------------------------------
+
+	1.0 - Widths
+
+	2.0 - Heights
+
+	3.0 - Type (sizes and align)
+
+	4.0 - Margins and Padding
+
+	5.0 - Positioning
+
+	6.0 - Clipping Paths
+
+	--------------------------------------------------------------*/
+	
+	
+	/* 1.0 - WIDTHS */
 	
 	#about .col-1-2, #services .col-1-2, .col-1-2.no-float, .col-1-6, .col-2-3.float-right, .col-7-12, #services div.col-1-4.row, footer .wrapper:nth-child(2), footer .col-2-3 {
 		width: 100%;
@@ -519,9 +547,19 @@ body > section:nth-child(2) {
 		width: 65%;
 	}
 	
+	/* 2.0 - HEIGHTS */
 	
-	/*TEXT SIZES*/
+	footer .bg-blue {
+		height: 45rem;
+	}
 	
+	.gallery-cell, #adventure {
+		height: 40vh;
+	}
+	
+	/* 3.0 - TEXT */
+	
+	/* sizes */
 	h3 {
 		font-size: 1.3rem;
 	}
@@ -552,23 +590,15 @@ body > section:nth-child(2) {
 		font-size: .8rem;
 	}
 	
-	/* CENTER TEXT */
+	/* center */
 	
 	.col-2-5, .col-1-6, #about .col-1-2 p {
 		text-align: center;
 	}
 	
-	/* HEIGHTS */
 	
-	footer .bg-blue {
-		height: 45rem;
-	}
 	
-	.gallery-cell, #adventure {
-		height: 40vh;
-	}
-	
-	/* MARGINS AND PADDING */
+	/* 4.0 - MARGINS AND PADDING */
 	
 	nav {
 		margin-bottom: 2rem;
@@ -608,7 +638,7 @@ body > section:nth-child(2) {
 		margin-top: 3rem;
 	}
 	
-	/*POSITIONING*/
+	/* 5.0 - POSITIONING*/
 	
 	body > .bg-gray .abso {
 		top: 6rem;
@@ -625,7 +655,7 @@ body > section:nth-child(2) {
 	}
 	
 	
-	/* CLIPPY */
+	/* 6.0 - CLIPPY */
 	
 		#home {
 			height: 60vh;
