@@ -206,6 +206,11 @@ input, textarea {
 	margin-top: .4rem;
 }
 
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
 /*	1.5 - Lists           */
 
 header li {
@@ -730,4 +735,15 @@ body > div:first-child {
 		margin-bottom: 0;
 	}
 	
+}
+
+
+_::-webkit-full-page-media, _:future, :root input {
+	padding-bottom: 2px;
+}
+
+_::-webkit-full-page-media, _:future, :root #safari {
+	display: table;
+	float: right;
+	margin: 18px 40px 0 0;
 }
